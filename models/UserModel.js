@@ -11,6 +11,7 @@ const UserSchema = new mongoose.Schema({
   cnpj: { type: String, required: false },
   birthdate: { type: Date, required: false },
   avatarUrl: { type: String, required: false },
+  tags: { type: [String] },
   address: Address,
 });
 

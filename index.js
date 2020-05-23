@@ -13,6 +13,6 @@ mongoose.connect(
 app.use(routes);
 // app.use(express.json());
 
-app.listen(3333, () => {
+app.listen(3000, () => {
   console.log('Tá on XD');
 });

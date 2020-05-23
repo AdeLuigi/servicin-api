@@ -1,5 +1,5 @@
 const Service = require('../models/ServiceModel');
-const User = require('../models/ServiceModel');
+const User = require('../models/UserModel');
 
 
 module.exports = {
