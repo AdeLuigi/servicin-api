@@ -51,13 +51,10 @@ module.exports = {
     const requestUpdate = request.body;
 
     try {
-      const serviceUpdate = await Chat.findOneAndUpdate(
-        filterById,
-        requestUpdate,
-        {
-          new: true,
-        },
-      );
+      const serviceUpdate = await Chat.findById(id);
+      serviceUpdate.messages.push(requestUpdate);
+      serviceUpdate.save();
+
       /*     if (serviceUpdate != null) {
         delete serviceUpdate.password;
       } */
