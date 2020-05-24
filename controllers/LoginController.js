@@ -1,3 +1,4 @@
+const { sign } = require('jsonwebtoken');
 const User = require('../models/UserModel');
 
 module.exports = {
@@ -8,8 +9,14 @@ module.exports = {
       const service = await User.findOne({ email });
       /*       console.log(password);
       console.log(service.password); */
+      const { _id } = service;
       if (password === service.password) {
-        return response.status(200).json({ service });
+        /*         const token = sign({}, 'senha', {
+          subject: _id,
+          expiresIn: '1d',
+        });
+ */
+        return response.status(200).json({ service, _id });
       }
       return response.status(404).json({ message: 'Password or email invalid' });
     } catch (error) {
