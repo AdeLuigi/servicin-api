@@ -13,6 +13,4 @@ mongoose.connect(
 app.use(routes);
 // app.use(express.json());
 
-app.listen(3000, () => {
-  console.log('Tá on XD');
-});
+app.listen(process.env.PORT, () => console.log(`App running in port ${process.env.PORT}`));
