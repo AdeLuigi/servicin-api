@@ -3,6 +3,6 @@ const userService = require('../controllers/userService');
 
 const rotinha = Router();
 
-rotinha.get('/', userService.userService);
+rotinha.post('/', userService.rotinha);
 
 module.exports = rotinha;

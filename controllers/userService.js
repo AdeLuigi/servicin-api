@@ -1,8 +1,9 @@
 const Service = require('../models/ServiceModel');
 
 module.exports = {
-  async userService(request, response) {
+  async rotinha(request, response) {
     const { userId } = request.body;
+    console.log(userId);
     try {
       const services = await Service.find({
         userId,

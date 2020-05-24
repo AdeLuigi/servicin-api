@@ -11,6 +11,6 @@ servicesRoute.post('/', ServiceController.store);
 servicesRoute.put('/:id', ServiceController.update);
 servicesRoute.delete('/:id', ServiceController.destroy);
 servicesRoute.get('/search', SearchServiceController.searchServicesFromLocation);
-servicesRoute.get('/userService/', userService.userService);
+servicesRoute.get('/userService/', userService.rotinha);
 
 module.exports = servicesRoute;
